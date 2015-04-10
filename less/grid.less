@@ -19,6 +19,9 @@
   @media (min-width: @screen-lg-min) {
     width: @container-lg;
   }
+  @media (min-width: @screen-xl-min) {
+    width: @container-xl;
+  }
 }
 
 
@@ -50,16 +53,14 @@
 
 // Extra small grid
 //
-// Columns, offsets, pushes, and pulls for extra small devices like
-// smartphones.
+// Columns, offsets, pushes, and pulls for small phones.
 
 .make-grid(xs);
 
 
 // Small grid
 //
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
+// Columns, offsets, pushes, and pulls for large phone portrait.
 
 @media (min-width: @screen-sm-min) {
   .make-grid(sm);
@@ -68,7 +69,7 @@
 
 // Medium grid
 //
-// Columns, offsets, pushes, and pulls for the desktop device range.
+// Columns, offsets, pushes, and pulls for large phone landscape.
 
 @media (min-width: @screen-md-min) {
   .make-grid(md);
@@ -77,8 +78,17 @@
 
 // Large grid
 //
-// Columns, offsets, pushes, and pulls for the large desktop device range.
+// Columns, offsets, pushes, and pulls for tablet portrait.
 
 @media (min-width: @screen-lg-min) {
   .make-grid(lg);
+}
+
+
+// Extra large grid
+//
+// Columns, offsets, pushes, and pulls for tablet landscape.
+
+@media (min-width: @screen-xl-min) {
+  .make-grid(xl);
 }

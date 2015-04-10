@@ -277,39 +277,47 @@
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
-// Extra small screen / phone
+// Extra small phone portrait
 //** Deprecated `@screen-xs` as of v3.0.1
-@screen-xs:                  480px;
+@screen-xs:                  320px;
 //** Deprecated `@screen-xs-min` as of v3.2.0
 @screen-xs-min:              @screen-xs;
 //** Deprecated `@screen-phone` as of v3.0.1
 @screen-phone:               @screen-xs-min;
 
-// Small screen / tablet
+// Large phone portrait
 //** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  640px;
+@screen-sm:                  361px; 
 @screen-sm-min:              @screen-sm;
 //** Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet:              @screen-sm-min;
 
-// Medium screen / desktop
+// Large phone landscape
 //** Deprecated `@screen-md` as of v3.0.1
-@screen-md:                  992px;
+@screen-md:                  640px;
 @screen-md-min:              @screen-md;
 //** Deprecated `@screen-desktop` as of v3.0.1
 @screen-desktop:             @screen-md-min;
 
-// Large screen / wide desktop
+// Tablet portrait
 //** Deprecated `@screen-lg` as of v3.0.1
-@screen-lg:                  1200px;
+@screen-lg:                  768px;
 @screen-lg-min:              @screen-lg;
 //** Deprecated `@screen-lg-desktop` as of v3.0.1
 @screen-lg-desktop:          @screen-lg-min;
+
+// Tablet lanbdscape
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-xl:                  1024px;
+@screen-xl-min:              @screen-xl;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-xl-desktop:          @screen-xl-min;
 
 // So media queries don't overlap when required, provide a maximum
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xl-min - 1);
 
 
 //== Grid system
@@ -332,19 +340,24 @@
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-@container-tablet:             (640px + @grid-gutter-width);
+@container-tablet:             (260px + @grid-gutter-width);
 //** For `@screen-sm-min` and up.
 @container-sm:                 @container-tablet;
 
 // Medium screen / desktop
-@container-desktop:            (940px + @grid-gutter-width);
+@container-desktop:            (740px + @grid-gutter-width);
 //** For `@screen-md-min` and up.
 @container-md:                 @container-desktop;
 
 // Large screen / wide desktop
-@container-large-desktop:      (1140px + @grid-gutter-width);
+@container-large-desktop:      (768px + @grid-gutter-width);
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
+
+// Extra Large screen / wide desktop
+@container-extra-large-desktop:      (1024px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-xl:                 @container-extra-large-desktop;
 
 
 //== Navbar
